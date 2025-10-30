@@ -1696,12 +1696,12 @@
 
     <script>
         // Loading Screen
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loading').classList.add('hidden');
-            }, 1500);
-        });
-
+      document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        const loading = document.getElementById('loading');
+        if (loading) loading.classList.add('hidden');
+    }, 1200);
+});
         // Typing Animation
         const typingText = document.getElementById('typingText');
         const phrases = [
